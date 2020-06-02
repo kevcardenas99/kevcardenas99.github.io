@@ -78,3 +78,204 @@ a img:hover{
     color: white;
     transition: all 0.5s ease-in-out;
 }
+
+.footerLogo{
+    width: 96px;
+}
+
+/*Hamburger Menu Holder*/
+
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-family: 'Righteous', cursive;
+}
+
+.menu-wrap .toggler{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    padding: 1rem;
+    background: rgba(202, 26, 26, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Hamburger Lines*/
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Top and Bottom Lines*/
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    width: 100%;
+    height: 4px;
+    background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+    top: 15px;
+}
+
+/*Toggle Animation */
+.menu-wrap .toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+}
+
+/* Turn lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+}
+
+/*show menu*/
+.menu-wrap .toggler:checked ~ .menu{
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div{
+    transform: scale(1);
+    transition-duration: .5s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.menu-wrap .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background: rgba(255,255,255,.9);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.menu-wrap .menu > div > div{
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: black;
+}
+
+.menu-wrap .menu > div > div > ul{
+    padding-left: 0;
+}
+
+.menu-wrap .menu > div > div > ul > li{
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+#modeSwitch{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: gray;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    /*transition: .5s;*/
+}
+
+#modeSwitch:checked{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: rgb(0, 0, 53);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    transition: .5s;
+}
+
+#modeSwitch:not(:checked){
+    transition: .5s;
+}
+
+#modeSwitch:before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+
+#modeSwitch:checked:before{
+    left: 40px;
+}
+
+#switch{
+    font-size: 1.5rem;
+    transition: .5s;
+}
