@@ -44,7 +44,7 @@ body{
     width: 500px;
 }
 
-#roundedProfile{
+.rounded-circle{
     width: 350px;
     height: 350px;
 }
@@ -83,6 +83,44 @@ a img:hover{
     width: 96px;
 }
 
+.lightModeFooter{
+    background-color: gray; 
+    text-align: center; 
+    font-family: 'Righteous', cursive;
+}
+
+.darkModeFooter{
+    background-color: rgb(53, 53, 53);
+}
+
+.leftSpace{
+    width: 275px;
+}
+
+.aboutImg{
+    width: 380px;
+}
+
+.aboutText{
+    width: 33vw;
+}
+
+.projectTitle{
+    width: 10vw;
+    font-size: 1.1vw;
+    font-family: 'Righteous', cursive;
+}
+
+.projectDes{
+    width: 60vw;
+    font-size: 1vw;
+}
+
+#projectHead{
+    font-family: 'Righteous', cursive;
+    font-size: 3vw;
+}
+
 /*Hamburger Menu Holder*/
 
 .menu-wrap{
@@ -116,6 +154,10 @@ a img:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.menu-wrap .hamburgerDark{
+    background: rgba(12, 6, 73, 0.8);
 }
 
 /*Hamburger Lines*/
@@ -194,8 +236,8 @@ a img:hover{
 .menu-wrap .menu > div {
     background: rgba(255,255,255,.9);
     border-radius: 50%;
-    width: 200vw;
-    height: 200vw;
+    width: 500vw;
+    height: 500vw;
     display: flex;
     flex: none;
     align-items: center;
@@ -278,4 +320,87 @@ a img:hover{
 #switch{
     font-size: 1.5rem;
     transition: .5s;
+}
+
+@media only screen and (max-width: 1000px) {
+    .aboutText{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #profile{
+        width: 85vw;
+    }
+
+    .rounded-circle{
+        width: 75vw;
+        height: 75vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo{
+        width: 17vw;
+    }
+
+    #footer h1, #footer h2{
+        font-size:7vw;
+    }
+
+    .footerLogo{
+        width: 20vw;
+    }
+
+    .smallHide{
+        display: none;
+    }
+
+    #aboutMe{
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    #aboutTxt{
+        width: 75vw;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .aboutImg{
+        width: 100%;
+    }
+
+    #projects{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container{
+        max-width: 100%;
+    }
+
+    #projectHead{
+        font-size: 10vw;
+    }
+
+    .projectTitle{
+        width: auto;
+        font-size: 5vw;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .projectDes{
+        width: 85vw;
+        font-size: 3vw;
+        text-align: center;
+    }
 }

@@ -9,13 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">        <!--Name Font-->
   <link rel="stylesheet" href="./css/style.css">                                                        <!--Personal Website-->
 </head>
-<body>
+<body onload="screenAdjustment()" onresize="screenAdjustment()">
   <!--Background image-->
   <div class="bgImage" id="bg">
     <!--Navbar-->
     <nav class=menu-wrap>
       <input type="checkbox" class="toggler">
-      <div class="hamburger"><div></div></div>
+      <div id="hamMenu" class="hamburger"><div></div></div>
       <div class="menu">
         <div id="splash">
           <div id="navLinks">
@@ -40,7 +40,7 @@
       <br>
       <br>
       <h1 style="font-family: 'Righteous', cursive;">Kevin Cardenas</h1>
-      <img src="./img/option2.jpg" class="rounded-circle" id="roundedProfile" alt="Cinque Terre">
+      <img src="./img/option2.jpg" class="rounded-circle">
       <br>
       <br>
       <a href="https://github.com/kevcardenas99" target="_blank"> <img id="githubIcon" src="./img/GitHub-Mark-Light-120px-plus.png" class="logo"> </a>
@@ -62,18 +62,17 @@
     <!--About Me-->
     <!--possible dark mode about me color: background-color: rgb(15, 15, 44)        light:background-color: rgb(199, 66, 66);-->
     <div class="row lightModeAbout" id="aboutMe"  style="color: white; margin:0">
-      <div class="col-2">
+      <div class="col smallHide"></div>
+      <div class="aboutImg" id="aboutImage">
+        <br>
+        <img src="./img/option2.jpg" class="rounded-circle">
+        <br>
+        <br>
       </div>
-      <div class="col-3">
-        <br>
-        <img src="./img/option2.jpg" class="rounded-circle" id="roundedProfile" alt="Cinque Terre">
-        <br>
-        <br>
-      </div>
-      <div class="col-5" style="display: flex; flex-direction: column; justify-content: center;">
+      <div class="aboutText" id="aboutTxt" style="display: flex; flex-direction: column; justify-content: center;">
         <p>My name is Kevin Cardenas and I am currently a senior at CUNY Queens College pursuing a Bachelors of Arts in Computer Science. I plan on graduating with a minor in Mathematics and also a minor in Environmental Science. My career goal is to become an Environmental Engineer specializing in hydraulic or atmospheric engineering. I will be pursuing a Civil Engineering Degree at Columbia University in order to pursue this.</p>
       </div>
-      <div class="col-2">
+      <div class="col smallHide">
       </div>
     </div>
 
@@ -82,66 +81,66 @@
     <div id="projects" class="lightModeProjects" style="margin:0">
       <br><br><br><br>
       <div class="container" style="text-align: center;">
-        <h1 style="font-family: 'Righteous', cursive;">Projects</h1>
+        <h1 id="projectHead">Projects</h1>
       </div>
       <br><br>
-      <div class="row" id="projectHolder" style="margin: 0px;">
-        <div class="col-2"></div>
-        <div class="col-1">
-          <h6>CapitalGaim</h6>
+      <div class="row" id="capHolder" style="margin: 0px;">
+        <div class="col smallHide"></div>
+        <div class="projectTitle" id="cap">
+          CapitalGaim
         </div>
-        <div class="col-7">
+        <div class="projectDes" id="capDes">
           Developed during the CUNY Lehman Hackathon. CapitalGaim was a game that my team and I created to offer a different perspective on financial empowerment.
           The game consists of a player starting out with a sum of money to be used wisely in buying properties to rent out to tenants. However, you also have to
           take into account the impact on the environment, and so an oxygen meter shows the quality of air, over time the meter goes down and the only way to
           stabilize the meter is by planting trees which also cost money. The project was developed using the Unity 2D Game Engine using scripts written in C#
         </div>
-        <div class="col-2" style="padding-right: 0px;"></div>
+        <div class="col smallHide" style="padding-right: 0px;"></div>
       </div>
       <br>
-      <div class="row" id="projectHolder" style="margin: 0px;">
-        <div class="col-2"></div>
-        <div class="col-1">
-          <h6>Carmogram</h6>
+      <div class="row" id="carmHolder" style="margin: 0px;">
+        <div class="col smallHide"></div>
+        <div class="projectTitle" id="carm">
+          Carmogram
         </div>
-        <div class="col-7">
+        <div class="projectDes" id="carmDes">
           Carmogram is an app that my team and I developed during NYUHack. The app aims to assist people who frequently take mediations that have potentially disruptive
           side effects. The app has a login system that holds information about medications the user takes and how often they take them. The app displays a chart of information
           on how they feel after taking their medications and shows them the optimal time for them to take each medication based on previous input. Over time the app adjusts its recommendation.
           The app was developed by using React Native
         </div>
-        <div class="col-2" style="padding-right: 0px;"></div>
+        <div class="col smallHide" style="padding-right: 0px;"></div>
       </div>
       <br>
-      <div class="row" id="projectHolder" style="margin: 0px;">
-        <div class="col-2"></div>
-        <div class="col-1">
-          <h6>EpicSauceTM</h6>
+      <div class="row" id="epicHolder" style="margin: 0px;">
+        <div class="col smallHide"></div>
+        <div class="projectTitle" id="epic">
+          EpicSauceTM
         </div>
-        <div class="col-7">
+        <div class="projectDes" id="epicDes">
           EpicSauceTM is a website developed by my colleagues and I for our Web Development Class. The website serves as a testing platform with an implementation of a registration system,
           a login system, functionality allowing a professor to create assignments, create questions, and add questions to assignments, and for the student side functionality that allows
           them to take assignments and then view their grade. The project implements php, html, css, javascript, and mysql.
         </div>
-        <div class="col-2" style="padding-right: 0px;"></div>
+        <div class="col smallHide" style="padding-right: 0px;"></div>
       </div>
       <br>
-      <div class="row" id="projectHolder" style="margin: 0px;">
-        <div class="col-2"></div>
-        <div class="col-1">
-          <h6>Personal Website</h6>
+      <div class="row" id="webHolder" style="margin: 0px;">
+        <div class="col smallHide"></div>
+        <div class="projectTitle" id="web">
+          Personal Website
         </div>
-        <div class="col-7">
+        <div class="projectDes" id="webDes">
           I developed this website to display past projects I have done, and the skills I learned in developing these projects. For the future this website will still hold projects most likely
           having to do with engineering.
         </div>
-        <div class="col-2" style="padding-right: 0px;"></div>
+        <div class="col smallHide" style="padding-right: 0px;"></div>
       </div>
       <br><br><br><br><br><br>
     </div>
 
     <!--Footer optimal height around 960px-->
-    <div id="footer" style="background-color: gray; text-align: center; font-family: 'Righteous', cursive;">
+    <div id="footer" class="lightModeFooter">
       <br><br>
       <h1>Thank you for visiting!</h1>
       <br><br>
