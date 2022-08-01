@@ -7,7 +7,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100;
-    background-image: url("../img/lightEggs.jpg"); /* light mode*/
+    background-image: url("../img/lightMode.jpg"); /* light mode*/
     background-size: cover;
     background-position: center;
     margin-top: 0px;
@@ -20,7 +20,7 @@ body{
     padding: 0;
     width: 100%;
     height: 100;
-    background-image: url("../img/darkEggs.jpg");
+    background-image: url("../img/darkMode.jpg");
     background-size: cover;
     background-position: center;
     margin-top: 0px;
